@@ -43,7 +43,6 @@ public class AuthController : ControllerBase
 
     [Authorize]
     [HttpGet("me")]
-    
     public IActionResult Me()
     {
         var phone = User.Identity?.Name;
