@@ -28,4 +28,18 @@ public class OtpController : ControllerBase
         var result = await _otpService.VerifyOtpAsync(dto.PhoneNumber, dto.OtpCode);
         return result ? Ok("OTP verified.") : BadRequest("Invalid or expired OTP.");
     }
+    [HttpGet("status")]
+    public IActionResult GetStatus()
+    {
+        // This endpoint can be used to check if the user is authenticated
+        // and to return any relevant status information.
+        return Ok("OTP service is running.");
+    }
+    [HttpGet("me")]
+    public IActionResult Me()
+    {
+        // This endpoint can be used to get the current user's information.
+        var phone = User.Identity?.Name;
+        return Ok(new { PhoneNumber = phone });
+    }
 }

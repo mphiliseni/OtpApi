@@ -65,5 +65,5 @@ app.MapControllers(); // This maps your OtpController
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapControllers();
 app.Run();

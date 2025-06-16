@@ -40,11 +40,13 @@ public class AuthController : ControllerBase
         return Ok(new { token });
     }
 
-    [HttpGet("me")]
+
     [Authorize]
+    [HttpGet("me")]
+    
     public IActionResult Me()
     {
-        var phone = User.Identity?.Name ?? "unknown";
+        var phone = User.Identity?.Name;
         return Ok($"You are logged in as: {phone}");
     }
 }
