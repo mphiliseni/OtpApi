@@ -1,7 +1,10 @@
-# OtpApi
-OTP API
+
+## OTP API
 ## Overview
 A RESTful API service for generating and validating One-Time Passwords (OTP).
+
+<img width="1440" alt="Screenshot 2025-06-16 at 18 32 04" src="https://github.com/user-attachments/assets/70fa2f23-8e55-4922-9fba-bb1a017705d1" />
+
 
 ## Features
 - Secure OTP generation
